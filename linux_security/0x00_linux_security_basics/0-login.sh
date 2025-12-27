@@ -1,2 +1,4 @@
 #!/bin/bash
-sudo last -n 5
+
+# Display the last 5 login sessions from wtmp
+last -n 5
