@@ -1,2 +1,1 @@
 icmp && ip.proto != 6 && ip.proto != 17
-
