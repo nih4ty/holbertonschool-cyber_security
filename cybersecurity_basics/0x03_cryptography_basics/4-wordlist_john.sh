@@ -1,3 +1,2 @@
 #!/bin/bash
-bash -c $'john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-md5 "$1" >/dev/null 2>&1\njohn --show --format=raw-md5 "$1" | cut -d: -f2 > 4-password.txt' bash "$1"
-
+bash -c $'tr -d "\r" < "$1" > /tmp/hashes_clean.txt\njohn --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA256 /tmp/hashes_clean.txt\njohn --show --format=Raw-SHA256 /tmp/hashes_clean.txt | awk -F: '\''NF>1{print $2}'\'' > 4-password.txt' _ "$1"
